@@ -74,6 +74,641 @@ var _hmt = _hmt || [];
   <header>
     
       <div class="icon"></div>
+      <a href="/leoblog/2019/09/18/轻松搞定网络视频下载/">
+  <time datetime="2019-09-18T13:53:26.000Z">
+    2019-09-18
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/leoblog/2019/09/18/轻松搞定网络视频下载/">轻松搞定网络视频下载</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>平时浏览视频时看到一些比较好的资源时都想下载下来“据为己有”，以便以后需要使用时方便一些，无赖各大视频网站对自己站点的视频设有保护措施，一般下载手段很难下载到，视频解析网站困于版权压力也不得不放弃对于主流视频网站的解析，今天安利一个好用的下载工具——you-get，you-get是一个基于 python 3的命令行下载工具，使用you-get之前一定要提前安装好Python3和FFmpeg,下面是you-get的正确打开方式：</p>
+<blockquote>
+<p>一、安装Python3<br>二、安装FFmpeg<br>三、安装you-get<br>四、使用you-get下载视频</p>
+</blockquote>
+<h3 id="一、安装Python3"><a href="#一、安装Python3" class="headerlink" title="一、安装Python3"></a>一、安装Python3</h3><p>1）进入Python<a href="https://www.python.org/downloads/" target="_blank" rel="noopener">官方网站</a>下载Python3，根据安装提示安装好软件。<br><img src="https://www.z4a.net/images/2019/09/21/python.jpg" alt><br>2）在CMD命令行窗口下输入：Python，如显示以下内容，则代表安装成功。<br><img src="https://www.z4a.net/images/2019/09/21/cmd-python.jpg" alt></p>
+<h3 id="二、安装FFmpeg"><a href="#二、安装FFmpeg" class="headerlink" title="二、安装FFmpeg"></a>二、安装FFmpeg</h3><p>1）这里以Windows平台为例，进入<a href="https://www.ffmpeg.org/download.html" target="_blank" rel="noopener">FFmpeg官网</a>。在【get the packages】一栏将鼠标移入windows图标，点击【windows Builds】中的”Builds”，如图：<br><img src="https://www.z4a.net/images/2019/09/21/ffmpeg.jpg" alt><br>2）在新打开的页面中选择【Static】版本，点击【Download Build】开始下载，如图：<br><img src="https://www.z4a.net/images/2019/09/21/download.jpg" alt><br>3）下载完成后得到一个名为”ffmpeg-20180908-4cfb01d-win64-static.zip”的压缩文件，将其解压至你想安装的位置，在解压后的文件夹里找到【bin】文件夹并进入此文件夹，复制其路径以便我们之后创建环境变量时要用。我这里的路径是：D:\Program Files\ffmpeg-20190918-53d31e9-win64-static\ffmpeg-20190918-53d31e9-win64-static\bin，如图：<br><img src="https://www.z4a.net/images/2019/09/21/bin.jpg" alt><br>4）添加【FFmpeg环境变量】。在“计算机”图标上单击鼠标右键，选择“属性”进入【系统】界面，在系统界面左边的菜单中选择“高级系统设置”，选择“高级”，点击“环境变量”。在【环境变量】面板找到系统变量【Path】,点击“编辑”，在【编辑环境变量】面板点击“新建”，然后将之前复制的路径粘贴进来，记住要在路径的末尾加上英文状态的分号【;】，依次点击【确定】即可。操作步骤如下图：<br><img src="https://www.z4a.net/images/2019/09/21/-.jpg" alt><br>在CMD命令行窗口下输入：ffmpeg -version，如显示以下内容，则代表安装成功。<br><img src="https://www.z4a.net/images/2019/09/21/ffmpeg-ok.jpg" alt></p>
+<h3 id="三、安装you-get"><a href="#三、安装you-get" class="headerlink" title="三、安装you-get"></a>三、安装you-get</h3><p>you-get是一个基于 python 3的命令行下载工具，可以使用Python的pip命令安装。在CMD命令行窗口下输入【pip install you-get】即可安装，输入【you-get -V】查看安装版本，如显示以下内容，则代表安装成功。<br><img src="https://www.z4a.net/images/2019/09/22/you-get-V.jpg" alt></p>
+<h3 id="四、使用you-get下载视频"><a href="#四、使用you-get下载视频" class="headerlink" title="四、使用you-get下载视频"></a>四、使用you-get下载视频</h3><p>以央视栏目《百家讲坛》中的《苏轼》第一节<a href="http://tv.cctv.com/2012/12/15/VIDE1355519227246478.shtml" target="_blank" rel="noopener">《少年成名》</a>为例，网址如下：<br><a href="http://tv.cctv.com/2012/12/15/VIDE1355519227246478.shtml" target="_blank" rel="noopener">http://tv.cctv.com/2012/12/15/VIDE1355519227246478.shtml</a><br>在CMD命令行窗口下输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">you-get http://tv.cctv.com/2012/12/15/VIDE1355519227246478.shtml</span><br></pre></td></tr></table></figure>
+
+<p>下图是将视频下载后放于E盘根目录下的一个下载情况：<br><img src="https://www.z4a.net/images/2019/09/22/you-get-eg.jpg" alt><br>you-get还有其他命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">you-get -i mediaURL【查看视频清晰度版本：选择清晰度下载】</span><br><span class="line">you-get -o rel mediaURL【自定义输出路径：rel是你自定义的输出路径】</span><br></pre></td></tr></table></figure>
+
+<p>更多命令，请参考文档：<a href="http://t.cn/8FFuaS8" target="_blank" rel="noopener">http://t.cn/8FFuaS8</a></p>
+<p><em>如此优秀的下载工具，还不快去试试？</em></p>
+<p><strong>【you-get】支持的网站如下：</strong></p>
+<table border="1">
+<thead>
+<tr>
+<th align="center" width="24%">Site</th>
+<th align="left" width="50%">URL</th>
+<th align="center" width="12%">Videos</th>
+<th align="center" width="12%">Images</th>
+<th align="center" width="12%">Audios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>YouTube</strong></td>
+<td align="left"><a href="https://www.youtube.com/" rel="noopener" target="_blank">https://www.youtube.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Twitter</strong></td>
+<td align="left"><a href="https://twitter.com/" rel="noopener" target="_blank">https://twitter.com/</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">VK</td>
+<td align="left"><a href="http://vk.com/" rel="noopener" target="_blank">http://vk.com/</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Vine</td>
+<td align="left"><a href="https://vine.co/" rel="noopener" target="_blank">https://vine.co/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Vimeo</td>
+<td align="left"><a href="https://vimeo.com/" rel="noopener" target="_blank">https://vimeo.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Vidto</td>
+<td align="left"><a href="http://vidto.me/" rel="noopener" target="_blank">http://vidto.me/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Videomega</td>
+<td align="left"><a href="http://videomega.tv/" rel="noopener" target="_blank">http://videomega.tv/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Veoh</td>
+<td align="left"><a href="http://www.veoh.com/" rel="noopener" target="_blank">http://www.veoh.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Tumblr</strong></td>
+<td align="left"><a href="https://www.tumblr.com/" rel="noopener" target="_blank">https://www.tumblr.com/</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">TED</td>
+<td align="left"><a href="http://www.ted.com/" rel="noopener" target="_blank">http://www.ted.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">SoundCloud</td>
+<td align="left"><a href="https://soundcloud.com/" rel="noopener" target="_blank">https://soundcloud.com/</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">SHOWROOM</td>
+<td align="left"><a href="https://www.showroom-live.com/" rel="noopener" target="_blank">https://www.showroom-live.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Pinterest</td>
+<td align="left"><a href="https://www.pinterest.com/" rel="noopener" target="_blank">https://www.pinterest.com/</a></td>
+<td align="center"></td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">MusicPlayOn</td>
+<td align="left"><a href="http://en.musicplayon.com/" rel="noopener" target="_blank">http://en.musicplayon.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">MTV81</td>
+<td align="left"><a href="http://www.mtv81.com/" rel="noopener" target="_blank">http://www.mtv81.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Mixcloud</td>
+<td align="left"><a href="https://www.mixcloud.com/" rel="noopener" target="_blank">https://www.mixcloud.com/</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">Metacafe</td>
+<td align="left"><a href="http://www.metacafe.com/" rel="noopener" target="_blank">http://www.metacafe.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Magisto</td>
+<td align="left"><a href="http://www.magisto.com/" rel="noopener" target="_blank">http://www.magisto.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Khan Academy</td>
+<td align="left"><a href="https://www.khanacademy.org/" rel="noopener" target="_blank">https://www.khanacademy.org/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Internet Archive</td>
+<td align="left"><a href="https://archive.org/" rel="noopener" target="_blank">https://archive.org/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Instagram</strong></td>
+<td align="left"><a href="https://instagram.com/" rel="noopener" target="_blank">https://instagram.com/</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">InfoQ</td>
+<td align="left"><a href="http://www.infoq.com/presentations/" rel="noopener" target="_blank">http://www.infoq.com/presentations/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Imgur</td>
+<td align="left"><a href="http://imgur.com/" rel="noopener" target="_blank">http://imgur.com/</a></td>
+<td align="center"></td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Heavy Music Archive</td>
+<td align="left"><a href="http://www.heavy-music.ru/" rel="noopener" target="_blank">http://www.heavy-music.ru/</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center"><strong>Google+</strong></td>
+<td align="left"><a href="https://plus.google.com/" rel="noopener" target="_blank">https://plus.google.com/</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Freesound</td>
+<td align="left"><a href="http://www.freesound.org/" rel="noopener" target="_blank">http://www.freesound.org/</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">Flickr</td>
+<td align="left"><a href="https://www.flickr.com/" rel="noopener" target="_blank">https://www.flickr.com/</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">FC2 Video</td>
+<td align="left"><a href="http://video.fc2.com/" rel="noopener" target="_blank">http://video.fc2.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Facebook</td>
+<td align="left"><a href="https://www.facebook.com/" rel="noopener" target="_blank">https://www.facebook.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">eHow</td>
+<td align="left"><a href="http://www.ehow.com/" rel="noopener" target="_blank">http://www.ehow.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Dailymotion</td>
+<td align="left"><a href="http://www.dailymotion.com/" rel="noopener" target="_blank">http://www.dailymotion.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Coub</td>
+<td align="left"><a href="http://coub.com/" rel="noopener" target="_blank">http://coub.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">CBS</td>
+<td align="left"><a href="http://www.cbs.com/" rel="noopener" target="_blank">http://www.cbs.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Bandcamp</td>
+<td align="left"><a href="http://bandcamp.com/" rel="noopener" target="_blank">http://bandcamp.com/</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">AliveThai</td>
+<td align="left"><a href="http://alive.in.th/" rel="noopener" target="_blank">http://alive.in.th/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">interest.me</td>
+<td align="left"><a href="http://ch.interest.me/tvn" rel="noopener" target="_blank">http://ch.interest.me/tvn</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>755<br>ナナゴーゴー</strong></td>
+<td align="left"><a href="http://7gogo.jp/" rel="noopener" target="_blank">http://7gogo.jp/</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>niconico<br>ニコニコ動画</strong></td>
+<td align="left"><a href="http://www.nicovideo.jp/" rel="noopener" target="_blank">http://www.nicovideo.jp/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>163<br>网易视频<br>网易云音乐</strong></td>
+<td align="left"><a href="http://v.163.com/" rel="noopener" target="_blank">http://v.163.com/</a><br><a href="http://music.163.com/" rel="noopener" target="_blank">http://music.163.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">56网</td>
+<td align="left"><a href="http://www.56.com/" rel="noopener" target="_blank">http://www.56.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>AcFun</strong></td>
+<td align="left"><a href="http://www.acfun.cn/" rel="noopener" target="_blank">http://www.acfun.cn/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Baidu<br>百度贴吧</strong></td>
+<td align="left"><a href="http://tieba.baidu.com/" rel="noopener" target="_blank">http://tieba.baidu.com/</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">爆米花网</td>
+<td align="left"><a href="http://www.baomihua.com/" rel="noopener" target="_blank">http://www.baomihua.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>bilibili<br>哔哩哔哩</strong></td>
+<td align="left"><a href="http://www.bilibili.com/" rel="noopener" target="_blank">http://www.bilibili.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">豆瓣</td>
+<td align="left"><a href="http://www.douban.com/" rel="noopener" target="_blank">http://www.douban.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">斗鱼</td>
+<td align="left"><a href="http://www.douyutv.com/" rel="noopener" target="_blank">http://www.douyutv.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Panda<br>熊猫</td>
+<td align="left"><a href="http://www.panda.tv/" rel="noopener" target="_blank">http://www.panda.tv/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">凤凰视频</td>
+<td align="left"><a href="http://v.ifeng.com/" rel="noopener" target="_blank">http://v.ifeng.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">风行网</td>
+<td align="left"><a href="http://www.fun.tv/" rel="noopener" target="_blank">http://www.fun.tv/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">iQIYI<br>爱奇艺</td>
+<td align="left"><a href="http://www.iqiyi.com/" rel="noopener" target="_blank">http://www.iqiyi.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">激动网</td>
+<td align="left"><a href="http://www.joy.cn/" rel="noopener" target="_blank">http://www.joy.cn/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">酷6网</td>
+<td align="left"><a href="http://www.ku6.com/" rel="noopener" target="_blank">http://www.ku6.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">酷狗音乐</td>
+<td align="left"><a href="http://www.kugou.com/" rel="noopener" target="_blank">http://www.kugou.com/</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">酷我音乐</td>
+<td align="left"><a href="http://www.kuwo.cn/" rel="noopener" target="_blank">http://www.kuwo.cn/</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">乐视网</td>
+<td align="left"><a href="http://www.le.com/" rel="noopener" target="_blank">http://www.le.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">荔枝FM</td>
+<td align="left"><a href="http://www.lizhi.fm/" rel="noopener" target="_blank">http://www.lizhi.fm/</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">秒拍</td>
+<td align="left"><a href="http://www.miaopai.com/" rel="noopener" target="_blank">http://www.miaopai.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">MioMio弹幕网</td>
+<td align="left"><a href="http://www.miomio.tv/" rel="noopener" target="_blank">http://www.miomio.tv/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">痞客邦</td>
+<td align="left"><a href="https://www.pixnet.net/" rel="noopener" target="_blank">https://www.pixnet.net/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">PPTV聚力</td>
+<td align="left"><a href="http://www.pptv.com/" rel="noopener" target="_blank">http://www.pptv.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">齐鲁网</td>
+<td align="left"><a href="http://v.iqilu.com/" rel="noopener" target="_blank">http://v.iqilu.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">QQ<br>腾讯视频</td>
+<td align="left"><a href="http://v.qq.com/" rel="noopener" target="_blank">http://v.qq.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">企鹅直播</td>
+<td align="left"><a href="http://live.qq.com/" rel="noopener" target="_blank">http://live.qq.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Sina<br>新浪视频<br>微博秒拍视频</td>
+<td align="left"><a href="http://video.sina.com.cn/" rel="noopener" target="_blank">http://video.sina.com.cn/</a><br><a href="http://video.weibo.com/" rel="noopener" target="_blank">http://video.weibo.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Sohu<br>搜狐视频</td>
+<td align="left"><a href="http://tv.sohu.com/" rel="noopener" target="_blank">http://tv.sohu.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Tudou<br>土豆</strong></td>
+<td align="left"><a href="http://www.tudou.com/" rel="noopener" target="_blank">http://www.tudou.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">虾米</td>
+<td align="left"><a href="http://www.xiami.com/" rel="noopener" target="_blank">http://www.xiami.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">阳光卫视</td>
+<td align="left"><a href="http://www.isuntv.com/" rel="noopener" target="_blank">http://www.isuntv.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>音悦Tai</strong></td>
+<td align="left"><a href="http://www.yinyuetai.com/" rel="noopener" target="_blank">http://www.yinyuetai.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Youku<br>优酷</strong></td>
+<td align="left"><a href="http://www.youku.com/" rel="noopener" target="_blank">http://www.youku.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">战旗TV</td>
+<td align="left"><a href="http://www.zhanqi.tv/lives" rel="noopener" target="_blank">http://www.zhanqi.tv/lives</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">央视网</td>
+<td align="left"><a href="http://www.cntv.cn/" rel="noopener" target="_blank">http://www.cntv.cn/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Naver<br>네이버</td>
+<td align="left"><a href="http://tvcast.naver.com/" rel="noopener" target="_blank">http://tvcast.naver.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">芒果TV</td>
+<td align="left"><a href="http://www.mgtv.com/" rel="noopener" target="_blank">http://www.mgtv.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">火猫TV</td>
+<td align="left"><a href="http://www.huomao.com/" rel="noopener" target="_blank">http://www.huomao.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">阳光宽频网</td>
+<td align="left"><a href="http://www.365yg.com/" rel="noopener" target="_blank">http://www.365yg.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">西瓜视频</td>
+<td align="left"><a href="https://www.ixigua.com/" rel="noopener" target="_blank">https://www.ixigua.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">快手</td>
+<td align="left"><a href="https://www.kuaishou.com/" rel="noopener" target="_blank">https://www.kuaishou.com/</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">抖音</td>
+<td align="left"><a href="https://www.douyin.com/" rel="noopener" target="_blank">https://www.douyin.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">TikTok</td>
+<td align="left"><a href="https://www.tiktok.com/" rel="noopener" target="_blank">https://www.tiktok.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">中国体育(TV)</td>
+<td align="left"><a href="http://v.zhibo.tv/" rel="noopener" target="_blank">http://v.zhibo.tv/</a> <br><a href="http://video.zhibo.tv/" rel="noopener" target="_blank">http://video.zhibo.tv/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">知乎</td>
+<td align="left"><a href="https://www.zhihu.com/" rel="noopener" target="_blank">https://www.zhihu.com/</a></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
       <a href="/leoblog/2019/08/08/全国中学生信息学奥林匹克竞赛（NOIP）大纲/">
   <time datetime="2019-08-08T01:05:00.000Z">
     2019-08-08
